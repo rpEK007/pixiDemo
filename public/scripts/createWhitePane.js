@@ -7,6 +7,7 @@ function createWhitePane() {
 	buttonSprite = new PIXI.Sprite.fromFrame("off.png");	
 
 	buttonSprite.interactive = true;
+	buttonSprite.buttonMode = true;
     buttonSprite.on('mouseup', function () {
     	buttonSprite.texture = PIXI.Texture.fromFrame('on.png');
         setTimeout(function () {

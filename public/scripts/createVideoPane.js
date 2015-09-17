@@ -24,9 +24,15 @@ function createVideoPane() {
 	stage.mask = roundMask;
 	finished = false;
 
-	setTimeout(function () {
+	timer = setTimeout(function () {
 		finished = true;
-	}, 5000);
+	}, 85000);
+	movieSprite.interactive = true;
+	movieSprite.buttonMode = true;
+	movieSprite.on('mouseup', function () {
+		finished = true;
+		clearTimeout(timer);
+	});
 	videoPaneAnimateEl = {
     	animate: function () {		    
 		    count += 0.05;

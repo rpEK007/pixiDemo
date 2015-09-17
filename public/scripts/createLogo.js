@@ -5,6 +5,7 @@ function createLogo() {
 
 	logo.rotationVelocity = 0;
     logo.interactive = true;
+    logo.buttonMode = true;
     logo.on('mouseover', function () {
     	logo.rotationVelocity = 0.07;
         logo.scale.set(0.75,0.75);
