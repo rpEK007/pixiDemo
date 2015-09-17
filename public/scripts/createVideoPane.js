@@ -44,8 +44,10 @@ function createVideoPane() {
 			roundMask.y = renderer.height / 2 + Math.cos(count) * 10;
 
     		if (radius < movieSprite.width / 2) {
-		    	radius += 10;
-		    	stageBlur.blur -= 10;
+    			if (videoTexture.baseTexture.hasLoaded) {
+					radius += 10;
+					stageBlur.blur -= 10;    				
+    			}
     		} else if (!finished) {
     			stageBlur.blur = 0;
     			buttonSprite.texture = PIXI.Texture.fromFrame('off.png');
