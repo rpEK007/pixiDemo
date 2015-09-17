@@ -1,0 +1,28 @@
+{
+	"frames": {
+		"off.png": {
+			"frame": {"x":0,"y":0,"w":137,"h":126},
+		    "rotated": false,
+		    "trimmed": false,
+		    "spriteSourceSize": {"x":0,"y":0,"w":137,"h":126},
+		    "sourceSize": {"w":137,"h":126},
+		    "pivot": {"x":0.5,"y":0.5}
+		},
+		"on.png": {
+			"frame": {"x":0,"y":126,"w":136,"h":136},
+		    "rotated": false,
+		    "trimmed": false,
+		    "spriteSourceSize": {"x":0,"y":0,"w":136,"h":136},
+		    "sourceSize": {"w":136,"h":136},
+		    "pivot": {"x":0.5,"y":0.5}
+		}
+	},
+	"meta": {
+		"app": "pixiDemo",
+	    "version": "1.0",
+	    "image": "onOff.png",
+	    "format": "RGBA8888",
+	    "size": {"w":137,"h":262},
+	    "scale": "1"
+	}
+}

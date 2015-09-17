@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "main": "index.html",
+  "dependencies": {
+    "express": "3.4.0"
+  },
+  "engines": {
+    "npm": "2.11.3",
+    "node": "0.12.7"
+  }
+}
