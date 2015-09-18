@@ -29,10 +29,13 @@ function createVideoPane() {
 	}, 85000);
 	movieSprite.interactive = true;
 	movieSprite.buttonMode = true;
-	movieSprite.on('mouseup', function () {
+	finishMovie = function () {
 		finished = true;
 		clearTimeout(timer);
-	});
+	};
+	movieSprite
+		.on('mouseup', finishMovie)
+		.on('touchend', finishMovie);
 	videoPaneAnimateEl = {
     	animate: function () {		    
 		    count += 0.05;

@@ -6,23 +6,27 @@ function createLogo() {
 	logo.rotationVelocity = 0;
     logo.interactive = true;
     logo.buttonMode = true;
-    logo.on('mouseover', function () {
-    	logo.rotationVelocity = 0.07;
+    function growLogo() {
+        logo.rotationVelocity = 0.07;
         logo.scale.set(0.75,0.75);
-    });
+    }
     function stopLogoAnimation() {
     	logo.rotation = 0.2;
     	logo.rotationVelocity = 0;
         logo.scale.set(0.5,0.5);
     };
-    logo.on('mouseout', stopLogoAnimation);
-    logo.on('mousedown', stopLogoAnimation);
-
-    logo.on('mouseup', function () {
+    function openCurtains() {
         isOpening = true;
         stopLogoAnimation();
         curtain.removeChild(logo);
-    });
+    };
+
+    logo
+        .on('mouseover', growLogo)
+        .on('mouseout', stopLogoAnimation)
+        .on('mousedown', stopLogoAnimation)
+        .on('mouseup', openCurtains)
+        .on('touchend', openCurtains);
 
     logo.anchor.x = 0.5;
     logo.anchor.y = 0.5;

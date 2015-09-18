@@ -8,12 +8,15 @@ function createWhitePane() {
 
 	buttonSprite.interactive = true;
 	buttonSprite.buttonMode = true;
-    buttonSprite.on('mouseup', function () {
+	function startMovie() {
     	buttonSprite.texture = PIXI.Texture.fromFrame('on.png');
         setTimeout(function () {
 			toBlur = true;
         }, 500);
-    });
+    }
+    buttonSprite
+    	.on('mouseup', startMovie)
+    	.on('touchend', startMovie);
 
 	stage.addChildAt(buttonSprite, 1);
 
